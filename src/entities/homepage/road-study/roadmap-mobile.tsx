@@ -68,16 +68,16 @@ const RoadMapMobile = () => {
               >
                 Đối tượng học:
               </motion.p>
-              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2, delay: 0.15 }}>
+              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2, delay: 0.15 }} className="list-disc">
                 {activeDetail?.target_user.map((user, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.1, delay: 0.05 * index }}
-                    className="text-[14px] font-normal"
+                    className="text-[14px] font-normal ml-4"
                   >
-                    - {user}
+                    {user}
                   </motion.li>
                 ))}
               </motion.ul>
@@ -89,14 +89,14 @@ const RoadMapMobile = () => {
               >
                 Thời gian học:
               </motion.p>
-              <motion.p
+              <motion.li
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.25 }}
                 className="text-[14px] font-normal"
               >
                 {activeDetail?.time}
-              </motion.p>
+              </motion.li>
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -105,16 +105,16 @@ const RoadMapMobile = () => {
               >
                 Mục tiêu khóa học:
               </motion.p>
-              <motion.ul initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2, delay: 0.35 }}>
+              <motion.ul className="list-disc" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2, delay: 0.35 }}>
                 {activeDetail?.target_study.map((study, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.1, delay: 0.05 * index }}
-                    className="text-[14px] font-normal"
+                    className="text-[14px] font-normal ml-4"
                   >
-                    - {study}
+                    {study}
                   </motion.li>
                 ))}
               </motion.ul>

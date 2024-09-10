@@ -6,7 +6,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@entities/*": ["./src/entities/*"],
-      "@based/*": ["./src/based/*"]
+      "@based/*": ["./src/based/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   }
 }
