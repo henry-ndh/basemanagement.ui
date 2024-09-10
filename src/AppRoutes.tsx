@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-const HomePage = React.lazy(() => import('./entities'));
+const HomePage = React.lazy(() => import('@/entities/homepage'));
 const SpeakingPage = React.lazy(() => import('@/entities/speaking'));
 
 const AppRoutes = [
