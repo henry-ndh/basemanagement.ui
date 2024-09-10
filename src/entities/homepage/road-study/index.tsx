@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 import RoadMap from './roadmap';
+import RoadMapMobile from './roadmap-mobile';
+import { useState, useEffect } from 'react';
 
 const RoadStudy = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
   return (
     <RoadStudyWrapper className="flex items-center">
-      <ModalWrapper className="bg-white rounded-lg w-[65%] h-[75%] max-2xl:h-[85%] max-2xl:mt-[10%] my-[6%] py-[2%] px-[3%] mx-auto shadow-xl">
-        <ModalHeader className="bg-white rounded-t-lg text-[32px] font-bold">Chi tiết lộ trình học</ModalHeader>
-        <ModalContent>
-          <RoadMap />
-        </ModalContent>
+      <ModalWrapper className="md:bg-white rounded-lg w-[100%] md:w-[65%] h-[75%] max-2xl:h-[85%] max-2xl:mt-[10%] my-[6%] py-[2%] px-[3%] mx-auto md:shadow-xl">
+        <ModalHeader className="md:bg-white rounded-t-lg text-[20px] md:text-[32px] font-bold">Chi tiết lộ trình học</ModalHeader>
+        <ModalContent>{isMobile ? <RoadMapMobile /> : <RoadMap />}</ModalContent>
       </ModalWrapper>
     </RoadStudyWrapper>
   );
