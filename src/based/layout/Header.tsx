@@ -7,10 +7,7 @@ export default function Header() {
   return (
     <HeaderWrapper style={{ zIndex: '999' }} className="flex  items-center justify-between">
       <Link to="/" className="flex items-center font-bold">
-        <span className="text-lg sm:text-xl">
-          Henry Nguyen
-          <span className="text-colorText text-[30px]">.</span>
-        </span>
+        <span className="text-lg sm:text-xl">Happy Kids</span>
       </Link>
       <HeaderNav />
       <MobileNav />

@@ -18,15 +18,21 @@ const listPromo = [
 
 const Promo = () => {
   return (
-    <PromoWrapper className="promo-wrapper bg-[#FFC400]">
+    <PromoWrapper className="flex promo-wrapper bg-[#FFC400]">
       <div className="promo-content">
-        <ul className="promo-list flex space-x-10">
+        <ul className="promo-list space-x-10 flex">
           {listPromo.map((item, index) => (
-            <li key={index} className="promo-item flex items-center text-[16px] max-2xl:text-[12px]">
+            <li key={index} className="promo-item items-center text-[16px] max-2xl:text-[12px] hidden md:flex">
               <span className="mr-2">{item.icon}</span>
               <span className="font-bold">{item.title}</span>
             </li>
           ))}
+          <li className="promo-item flex items-center text-[16px] max-2xl:text-[12px] md:hidden">
+            <span className="mr-2">
+              <PromoIcon.Promo1 width="24px" height="24px" />
+            </span>
+            <span className="font-bold">Giảm 10% học phí khi đăng ký khóa học mới</span>
+          </li>
         </ul>
       </div>
     </PromoWrapper>
@@ -36,7 +42,6 @@ const Promo = () => {
 export default Promo;
 
 const PromoWrapper = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

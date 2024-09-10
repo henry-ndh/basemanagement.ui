@@ -11,6 +11,7 @@ const HomePage = () => {
       <HomePageBody className="promo-body ">
         <Introduce />
         <RoadStudy />
+        <Introduce />
       </HomePageBody>
     </HomePageWrapper>
   );
