@@ -5,17 +5,17 @@ import styled from 'styled-components';
 export const MenuHeader = [
     {
         id: 1,
-        name: 'Home',
+        name: 'Trang chủ',
         link: '/',
     },
     {
         id: 2,
-        name: 'Services',
+        name: 'Khóa học',
         link: '/services',
     },
     {
         id: 3,
-        name: 'Resume',
+        name: 'Lịch khai giảng',
         link: '/resume',
     },
     // {
