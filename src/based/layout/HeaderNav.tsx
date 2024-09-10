@@ -9,14 +9,17 @@ const HeaderNav = () => {
     <nav className="hidden items-center gap-6 text-sm  font-medium md:flex">
       {MenuHeader.map((item) => (
         <Link to={item.link} className="">
-          <ItemHeader key={item.name} className={`flex items-center gap-4 py-1.5 ${path == item.link ? `text-colorText` : ``}`}>
+          <ItemHeader
+            key={item.name}
+            className={`flex items-center text-[16px] max-2xl:text-[13px] gap-4 py-1.5 ${path == item.link ? `text-colorText` : ``}`}
+          >
             {item.name}
           </ItemHeader>
         </Link>
       ))}
       <motion.button
         whileHover={{ scale: 1.01 }}
-        className="px-4 py-2 text-[12px] w-[100px] text-white font-medium ml-2  bg-blueDark rounded-[50px] cursor-pointer
+        className="px-4 py-2 text-[16px] max-2xl:w-[120px]  max-2xl:text-[13px] w-[150px] text-white font-medium ml-2  bg-blueDark rounded-[50px] cursor-pointer
           hover:bg-[#1b245b] transition-all duration-300 ease-in-out
         "
       >
