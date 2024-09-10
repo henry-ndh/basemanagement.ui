@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Promo from './promo/Promo';
-
+import Student from './student';
 import Introduce from './introduce';
 import RoadStudy from './road-study';
 
@@ -11,7 +11,7 @@ const HomePage = () => {
       <HomePageBody className="promo-body ">
         <Introduce />
         <RoadStudy />
-        <Introduce />
+        <Student />
       </HomePageBody>
     </HomePageWrapper>
   );
