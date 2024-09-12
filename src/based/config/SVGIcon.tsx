@@ -1,5 +1,3 @@
-import { Certificate } from 'crypto';
-
 export const Details = (props: any) => {
   return (
     <svg {...props} fill="#17FF9F" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
