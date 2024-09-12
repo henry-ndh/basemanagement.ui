@@ -31,7 +31,7 @@ const countUpData = [
 const Introduce = () => {
   return (
     <IntroduceWrapper className="pb-introduce relative w-full h-auto py-8 md:h-[60dvh]">
-      <div className="pb-introduce-content flex w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium">
+      <div className="pb-introduce-content flex flex-col md:flex-row w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -57,15 +57,31 @@ const Introduce = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="content_right w-full md:w-[50%] h-full md:grid grid-cols-2 gap-4 hidden pl-4"
+          className="content_right w-full md:w-[50%] h-full md:grid grid-cols-2 gap-4  pl-4"
         >
-          <div className="flex flex-col gap-4">
-            <img src={ImgClass1} alt="class" className="2xl:h-[160px] xl:h-[130px] h-[110px] w-full object-cover rounded-lg" />
-            <img src={ImgClass4} alt="class" className="2xl:h-[180px] xl:h-[150px] h-[130px] w-full object-cover rounded-lg" />
+          <div className="flex md:flex-col gap-4 my-4 md:mb-0">
+            <img
+              src={ImgClass1}
+              alt="class"
+              className="2xl:h-[160px] xl:h-[130px] h-[110px] max-sm:h-[120px] max-sm:w-[55%] w-full object-cover rounded-lg"
+            />
+            <img
+              src={ImgClass4}
+              alt="class"
+              className="2xl:h-[180px] xl:h-[150px] h-[130px] max-sm:h-[120px] max-sm:w-[40%] w-full object-cover rounded-lg"
+            />
           </div>
-          <div className="flex flex-col gap-4">
-            <img src={ImgClass2} alt="class" className="2xl:h-[180px] xl:h-[150px] h-[130px] w-full object-cover rounded-lg" />
-            <img src={ImgClass3} alt="class" className="2xl:h-[160px] xl:h-[140px] h-[120px] w-full object-cover rounded-lg" />
+          <div className="flex md:flex-col  gap-4">
+            <img
+              src={ImgClass2}
+              alt="class"
+              className="2xl:h-[180px] xl:h-[150px] h-[130px] max-sm:h-[120px] max-sm:w-[40%] w-full object-cover rounded-lg"
+            />
+            <img
+              src={ImgClass3}
+              alt="class"
+              className="2xl:h-[160px] xl:h-[140px] h-[120px] max-sm:h-[120px] max-sm:w-[55%] w-full object-cover rounded-lg"
+            />
           </div>
         </motion.div>
       </div>

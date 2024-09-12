@@ -95,7 +95,7 @@ const RoadMap = () => {
           transition={{ duration: 0.3, delay: 0.1, ease: 'easeOut' }}
           className="action-button mt-6"
         >
-          <Button className="bg-blueDark text-[18px] px-8 py-7 rounded-xl">Đăng ký ngay</Button>
+          <Button className="bg-blueDark text-[18px] px-8 py-7 mb-10 rounded-xl ">Đăng ký ngay</Button>
         </motion.div>
       </AnimatePresence>
     </div>

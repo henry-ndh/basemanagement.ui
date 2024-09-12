@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Silka';
+  src        : url('./assets/fonts/iCielSilka-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Silka-Bold';
+  src        : url('./assets/fonts/iCielSilka-Bold.otf') format('truetype');
+}
+
 @layer base {
   :root {
     --background            : 0 0% 100%;

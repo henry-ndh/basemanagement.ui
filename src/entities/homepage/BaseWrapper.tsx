@@ -15,13 +15,13 @@ const BaseWrapperWithColor = ({ children, className }: BaseWrapperProps) => {
 
 const BaseWrapperBasicStyled = styled.div`
   width: 100%;
-  height: 90dvh;
+  height: 95dvh;
 `;
 
 const BaseWrapperWithColorStyled = styled.div`
   width: 100%;
   background-image: linear-gradient(103deg, #fdf1ec 0.58%, #b4e2f8 101.36%);
-  height: 90dvh;
+  height: 95dvh;
 `;
 
 export { BaseWrapperBasic, BaseWrapperWithColor };

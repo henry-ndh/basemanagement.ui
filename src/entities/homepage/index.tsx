@@ -3,16 +3,16 @@ import Promo from './promo/Promo';
 import Student from './student';
 import Introduce from './introduce';
 import RoadStudy from './road-study';
-
+import Teacher from './teacher';
 const HomePage = () => {
   return (
     <HomePageWrapper>
       <Promo />
-      <HomePageBody className="promo-body ">
+      <HomePageBody className="promo-body">
         <Introduce />
         <RoadStudy />
         <Student />
-        <RoadStudy />
+        <Teacher />
       </HomePageBody>
     </HomePageWrapper>
   );
