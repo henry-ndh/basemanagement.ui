@@ -31,7 +31,7 @@ const countUpData = [
 const Introduce = () => {
   return (
     <IntroduceWrapper className="pb-introduce relative w-full h-auto py-8 md:h-[60dvh]">
-      <div className="pb-introduce-content flex flex-col md:flex-row w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium">
+      <div className="pb-introduce-content flex flex-col md:flex-row w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium justify-between">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -57,18 +57,18 @@ const Introduce = () => {
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="content_right w-full md:w-[50%] h-full md:grid grid-cols-2 gap-4  pl-4"
+          className="content_right w-full md:w-[50%] h-full md:grid grid-cols-2 gap-4 "
         >
-          <div className="flex md:flex-col gap-4 my-4 md:mb-0">
+          <div className="flex md:flex-col gap-4 my-4 md:my-0">
             <img
               src={ImgClass1}
               alt="class"
-              className="2xl:h-[160px] xl:h-[130px] h-[110px] max-sm:h-[120px] max-sm:w-[55%] w-full object-cover rounded-lg"
+              className="2xl:h-[150px] xl:h-[130px] h-[110px] max-sm:h-[120px] max-sm:w-[55%] w-full object-cover rounded-lg"
             />
             <img
               src={ImgClass4}
               alt="class"
-              className="2xl:h-[180px] xl:h-[150px] h-[130px] max-sm:h-[120px] max-sm:w-[40%] w-full object-cover rounded-lg"
+              className="2xl:h-[190px] xl:h-[150px] h-[130px] max-sm:h-[120px] max-sm:w-[40%] w-full object-cover rounded-lg"
             />
           </div>
           <div className="flex md:flex-col  gap-4">
@@ -89,7 +89,7 @@ const Introduce = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="pb-countup border-[1px] mt-[30px]  md:mt-0 h-[120px] border-[#c5e4ff] rounded-2xl w-[90%] md:w-[70%] mx-auto left-[5%] md:left-[15%] py-4 md:h-[90px] bg-white md:absolute flex md:flex-row justify-around md:space-y-0 md:space-x-4 items-center bottom-[-20%] md:bottom-[-2.5rem] shadow-md"
+        className="pb-countup border-[1px] mt-[30px]  md:mt-0 h-[120px] border-[#c5e4ff] rounded-2xl w-[90%] md:w-[70%] mx-auto left-[5%] md:left-[15%] py-4 md:h-[80px] bg-white md:absolute flex md:flex-row justify-around md:space-y-0 md:space-x-4 items-center bottom-[-20%] md:bottom-[-2.5rem] shadow-md"
       >
         {countUpData.map((item, index) => (
           <div key={index} className="flex flex-col md:flex-row items-center justify-center space-x-3">
