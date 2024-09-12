@@ -3,13 +3,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { RoadMapDetailData, RoadMapData } from '@/based/data/Data';
-
 const RoadMap = () => {
   const [active, setActive] = useState(1);
   const activeDetail = RoadMapDetailData.find((item) => item.id === active);
 
   return (
-    <>
+    <div className="relative">
       <RoadMapWrapper className="space-x-3">
         {RoadMapData.map((item, index) => (
           <RoadMapContent
@@ -99,7 +98,7 @@ const RoadMap = () => {
           <Button className="bg-blueDark text-[18px] px-8 py-7 rounded-xl">Đăng ký ngay</Button>
         </motion.div>
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 export default RoadMap;
