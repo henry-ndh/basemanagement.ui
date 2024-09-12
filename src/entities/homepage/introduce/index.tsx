@@ -3,7 +3,10 @@ import { Button } from '@/components/ui/button';
 import { CountUpIcon } from '@/based/config/SVGIcon';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-
+import ImgClass1 from '@/assets/class/class1.jpg';
+import ImgClass2 from '@/assets/class/class2.jpg';
+import ImgClass3 from '@/assets/class/class3.jpg';
+import ImgClass4 from '@/assets/class/class4.jpg';
 const countUpData = [
   {
     title: 'Học viên đã tham gia',
@@ -15,14 +18,12 @@ const countUpData = [
     title: 'Review tốt từ phụ huynh',
     number: 787,
     icon: <CountUpIcon.CountUp2 className="w-[16px] h-[16px] md:w-[22px] md:h-[22px] " />,
-
     type: '+',
   },
   {
     title: 'Phụ huynh hài lòng',
     number: 98,
     icon: <CountUpIcon.CountUp3 className="w-[16px] h-[16px] md:w-[22px] md:h-[22px] " />,
-
     type: '%',
   },
 ];
@@ -30,7 +31,7 @@ const countUpData = [
 const Introduce = () => {
   return (
     <IntroduceWrapper className="pb-introduce relative w-full h-auto py-8 md:h-[60dvh]">
-      <div className="pb-introduce-content w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium">
+      <div className="pb-introduce-content flex w-full px-4 md:w-[60%] md:m-auto text-[14px] md:text-[16px] font-medium">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -52,7 +53,21 @@ const Introduce = () => {
             </Button>
           </div>
         </motion.div>
-        <div className="content_right w-full md:w-[50%]"></div>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="content_right w-full md:w-[50%] h-full md:grid grid-cols-2 gap-4 hidden pl-4"
+        >
+          <div className="flex flex-col gap-4">
+            <img src={ImgClass1} alt="class" className="2xl:h-[160px] xl:h-[130px] h-[110px] w-full object-cover rounded-lg" />
+            <img src={ImgClass4} alt="class" className="2xl:h-[180px] xl:h-[150px] h-[130px] w-full object-cover rounded-lg" />
+          </div>
+          <div className="flex flex-col gap-4">
+            <img src={ImgClass2} alt="class" className="2xl:h-[180px] xl:h-[150px] h-[130px] w-full object-cover rounded-lg" />
+            <img src={ImgClass3} alt="class" className="2xl:h-[160px] xl:h-[140px] h-[120px] w-full object-cover rounded-lg" />
+          </div>
+        </motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
