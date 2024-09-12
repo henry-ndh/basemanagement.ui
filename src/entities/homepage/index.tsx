@@ -4,6 +4,7 @@ import Student from './student';
 import Introduce from './introduce';
 import RoadStudy from './road-study';
 import Teacher from './teacher';
+import TrainingPhilosophy from './training-philosophy';
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -12,6 +13,7 @@ const HomePage = () => {
         <Introduce />
         <RoadStudy />
         <Student />
+        <TrainingPhilosophy />
         <Teacher />
       </HomePageBody>
     </HomePageWrapper>
