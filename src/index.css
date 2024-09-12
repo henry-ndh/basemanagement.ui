@@ -60,17 +60,6 @@
   }
 }
 
-.swiper {
-  width : 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align    : center;
-  padding-bottom: 20px;
-  padding-top   : 50px;
-}
-
 
 @layer base {
   * {
@@ -81,3 +70,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*  */

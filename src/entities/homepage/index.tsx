@@ -12,6 +12,7 @@ const HomePage = () => {
         <Introduce />
         <RoadStudy />
         <Student />
+        <RoadStudy />
       </HomePageBody>
     </HomePageWrapper>
   );
