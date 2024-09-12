@@ -12,6 +12,7 @@
   src        : url('./assets/fonts/iCielSilka-Bold.otf') format('truetype');
 }
 
+
 @layer base {
   :root {
     --background            : 0 0% 100%;
@@ -82,3 +83,9 @@
 }
 
 /*  */
+
+* {
+  @media screen and (max-width: 768px) {
+    touch-action: pan-y;
+  }
+}
