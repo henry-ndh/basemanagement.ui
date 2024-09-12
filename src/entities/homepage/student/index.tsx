@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
@@ -47,6 +46,25 @@ const listStudent = [
 ];
 
 const Student = () => {
+  const swiperRef = useRef() as any;
+  const handleSlideChange = () => {
+    if (swiperRef.current) {
+      const swiper = swiperRef.current.swiper;
+      const activeIndex = swiper.activeIndex;
+
+      document.querySelectorAll('.swiper-slide').forEach((slide) => {
+        slide.classList.remove('swiper-slide-nth-prev-2', 'swiper-slide-nth-next-2');
+      });
+      const prev2Slide = swiper.slides[activeIndex - 2];
+      const next2Slide = swiper.slides[activeIndex + 2];
+      if (prev2Slide) {
+        prev2Slide.classList.add('swiper-slide-nth-prev-2');
+      }
+      if (next2Slide) {
+        next2Slide.classList.add('swiper-slide-nth-next-2');
+      }
+    }
+  };
   return (
     <StudentWrapper>
       <div className="w-[100%] flex flex-col items-center mx-auto">
@@ -54,9 +72,18 @@ const Student = () => {
           HAPPY KIDS MANG ĐẾN BƯỚC KHỞI ĐẦU TỐT VÀ TOÀN DIỆN NHẤT CHO TRẺ
         </TrainingTitle>
         <div className="max-w-[1100px] min-w-[900px] w-auto h-[300px]">
-          <Swiper spaceBetween={20} modules={[Pagination]} className="mySwiper" slidesPerView={5} loop={true} centeredSlides={true}>
+          <Swiper
+            spaceBetween={20}
+            modules={[Pagination]}
+            className="mySwiper"
+            slidesPerView={5}
+            loop={true}
+            centeredSlides={true}
+            onSlideChange={handleSlideChange}
+            ref={swiperRef}
+          >
             {listStudent.map((student) => (
-              <SwiperSlide key={student.id} className="slide">
+              <SwiperSlide key={student.id}>
                 <div className="flex justify-center items-center">
                   <img src={student.image} alt={student.name} className="student-image rounded-full w-[170px] h-[170px] object-cover" />
                 </div>

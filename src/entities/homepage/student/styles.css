@@ -6,23 +6,32 @@
 
 .swiper-slide {
     transition: transform 0.3s ease;
-    /* Đặt kích thước gốc của slide */
-    transform : scale(0.8);
 }
 
-
+.swiper-slide {
+    scale: 0.5;
+}
 
 .swiper-slide-active {
-    transform: scale(1);
-    /* Slide ở giữa to hơn */
+    scale     : 1;
+    transform : scale(1);
+    transition: all 0.3s ease;
 }
 
 .swiper-slide-prev,
 .swiper-slide-next {
-    transform: scale(0.8);
+    scale     : 0.7;
+    transform : scale(0.7);
+    transition: all 0.3s ease;
+
 }
 
-.swiper-slide-prev-prev,
-.swiper-slide-next-next {
-    transform: scale(0.9);
+
+.swiper-slide-nth-prev-2,
+.swiper-slide-nth-next-2 {
+    scale     : 0.5;
+    transform : scale(0.7);
+    transition: all 0.3s ease;
+
+
 }
