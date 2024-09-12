@@ -38,17 +38,17 @@ const Teacher = () => {
   const [selectedTeacher, setSelectedTeacher] = useState(ListTeacher[0]);
 
   return (
-    <BaseWrapperBasic className="flex flex-col p-8">
-      <div className="w-[60%] mx-auto">
+    <BaseWrapperBasic className="flex flex-col p-4 md:p-8">
+      <div className="w-full md:w-[60%] mx-auto">
         <h2 className="text-2xl font-bold mb-4">Đội ngũ giáo viên</h2>
         <p className="mb-8">
           Là những giáo viên luôn tận tâm với công việc, được đào tạo chuyên môn bài bản và đạt chuẩn theo chương trình giảng dạy
         </p>
-        <div className="list-img-teacher flex justify-between mb-8 w-full">
+        <div className="list-img-teacher grid grid-cols-2 md:flex md:justify-between mb-8 w-full ">
           {ListTeacher.map((teacher, index) => (
             <div
               key={index}
-              className={`text-center cursor-pointer border-[1px] flex justify-center items-center flex-col w-[23%]  py-3 ${
+              className={`text-center cursor-pointer border-[1px] flex justify-center items-center flex-col md:w-[23%] w-[95%] my-2 md:my-0 py-3 ${
                 selectedTeacher.id === teacher.id ? 'border-[#0065FF] bg-[#dcedfd]' : 'border-[#c7cdda]'
               } rounded-lg`}
               onClick={() => setSelectedTeacher(teacher)}
@@ -59,12 +59,12 @@ const Teacher = () => {
           ))}
         </div>
         <AnimatePresence key={selectedTeacher.id}>
-          <div className="teacher-info grid grid-cols-[40%,65%] ">
+          <div className="teacher-info  md:grid grid-cols-[40%,65%] ">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="border-[1px] border-[#c7cdda] rounded-2xl max-h-[240px] bg-white flex justify-center"
+              className="border-[1px] border-[#c7cdda] rounded-2xl max-h-[240px] mb-4 md:mb-0 bg-white flex justify-center"
             >
               <img src={selectedTeacher.img} alt={selectedTeacher.name} className="w-[50%] h-full  mb-4" />
             </motion.div>
