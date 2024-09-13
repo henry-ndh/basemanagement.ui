@@ -9,7 +9,7 @@ const Teacher = () => {
 
   return (
     <BaseWrapperBasic className="box flex flex-col p-4 md:p-8 min-h-[1000px] md:min-h-[600px] md:max-h-[700px]">
-      <div className="w-full box_scale md:w-[60%] mx-auto">
+      <div className="w-full  md:w-[60%] mx-auto">
         <div className="flex flex-col justify-center items-center">
           <TrainingTitle className="text-[34px]">Đội ngũ giáo viên</TrainingTitle>
           <p className="mb-8 bg-[#fafaa4] py-6 px-10 rounded-lg my-6">
