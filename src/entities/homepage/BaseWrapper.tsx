@@ -14,7 +14,7 @@ const BaseWrapperWithColor = ({ children, className }: BaseWrapperProps) => {
 };
 
 const BaseWrapperGrey = ({ children, className }: BaseWrapperProps) => {
-  return <BaseWrapperGreyStyled className={`${className} h-[95dvh] bg-[#f4f4f4]`}>{children}</BaseWrapperGreyStyled>;
+  return <BaseWrapperGreyStyled className={`${className} h-[95dvh] bg-[#e5e5e5]`}>{children}</BaseWrapperGreyStyled>;
 };
 
 const BaseWrapperBasicStyled = styled.div`
