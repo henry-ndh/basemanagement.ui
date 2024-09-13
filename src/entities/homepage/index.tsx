@@ -5,7 +5,10 @@ import Introduce from './introduce';
 import RoadStudy from './road-study';
 import Teacher from './teacher';
 import TrainingPhilosophy from './training-philosophy';
+import Advisory from './advisory';
+import HomeInfraStructure from './home-infrastructure';
 import ScrollAnimationBox from '@/components/scroll-animation-box';
+
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -17,6 +20,8 @@ const HomePage = () => {
           <Student />
           <TrainingPhilosophy />
           <Teacher />
+          <Advisory />
+          <HomeInfraStructure />
         </ScrollAnimationBox>
       </HomePageBody>
     </HomePageWrapper>

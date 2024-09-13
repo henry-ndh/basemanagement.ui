@@ -72,8 +72,10 @@ const Student = () => {
             })}
           </Swiper>
         </div>
-        <TrainingTitle className="box_scale text-[24px]">{listStudent[activeIndex].name}</TrainingTitle>
-        <TrainingSubTitle className="box_scale">Happy Kids</TrainingSubTitle>
+        <div className="box_scale text-center">
+          <TrainingTitle className=" text-[24px]">{listStudent[activeIndex].name}</TrainingTitle>
+          <TrainingSubTitle className="">Happy Kids</TrainingSubTitle>
+        </div>
         <div className=" text-[16px] w-[90%] md:w-[60%] md:text-[16px] bg-[#fafaa4] rounded-[30px] relative py-6 px-10 text-center my-8">
           <motion.div key={activeIndex} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
             {listStudent[activeIndex].comment}
@@ -102,7 +104,7 @@ const StudentWrapper = styled.div`
     filter: drop-shadow(1px 1px 8px #3b82f6);
   }
 `;
-const TrainingTitle = styled.h2`
+export const TrainingTitle = styled.h2`
   font-family: 'Silka-Bold';
   color: var(--blue-dark);
 `;

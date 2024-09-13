@@ -134,6 +134,60 @@ export const listStudent = [
   },
 ];
 
+// export const ListTeacher = [
+//   {
+//     id: 1,
+//     img: Teacher1,
+//     name: 'Nguyễn Thị A',
+//     position: 'Giáo viên',
+//     listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ Mosteri', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
+//   },
+//   {
+//     id: 2,
+//     img: Teacher1,
+//     name: 'Nguyễn Thị B',
+//     position: 'Giáo viên',
+//     listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
+//   },
+//   {
+//     id: 3,
+//     img: Teacher1,
+//     name: 'Nguyễn Thị C',
+//     position: 'Giáo viên',
+//     listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
+//   },
+//   {
+//     id: 4,
+//     img: Teacher1,
+//     name: 'Nguyễn Thị D',
+//     position: 'Giáo viên',
+//     listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
+//   },
+// ];
+
+export const ASK = [
+  {
+    id: 1,
+    title: 'ATTITUDE',
+    content:
+      'Thái độ hơn trình độ” – Học viên sẽ có thái độ tốt với bản thân, gia đình, xã hội. Yêu bản thân, biết ơn gia đình, có trách nhiệm với xã hội',
+    color: 'bg-[#fae7f0]',
+  },
+  {
+    id: 2,
+    title: 'SKILLS',
+    content:
+      'Các kỹ năng cần thiết và quan trọng cho tương lai của các Học viên như kỹ năng sống, tính độc lập, sự sáng tạo, tinh thần đồng đội, sự tự tin, thuyết trình, tranh luận,...',
+    color: 'bg-[#fefae5]',
+  },
+  {
+    id: 3,
+    title: 'KNOWLEDGE',
+    content:
+      'Các Học viên sẽ được trang bị kiến thức về tư duy ngôn ngữ, kiến thức xã hội,... làm hành trang phát triển năng lực toàn diện cho Học viên sau này.',
+    color: 'bg-[#acecfe]',
+  },
+];
 export const ListTeacher = [
   {
     id: 1,
@@ -164,28 +218,3 @@ export const ListTeacher = [
     listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
   },
 ];
-
-export const ASK = [
-  {
-    id: 1,
-    title: 'ATTITUDE',
-    content:
-      'Thái độ hơn trình độ” – Học viên sẽ có thái độ tốt với bản thân, gia đình, xã hội. Yêu bản thân, biết ơn gia đình, có trách nhiệm với xã hội',
-    color: 'bg-[#fae7f0]',
-  },
-  {
-    id: 2,
-    title: 'SKILLS',
-    content:
-      'Các kỹ năng cần thiết và quan trọng cho tương lai của các Học viên như kỹ năng sống, tính độc lập, sự sáng tạo, tinh thần đồng đội, sự tự tin, thuyết trình, tranh luận,...',
-    color: 'bg-[#fefae5]',
-  },
-  {
-    id: 3,
-    title: 'KNOWLEDGE',
-    content:
-      'Các Học viên sẽ được trang bị kiến thức về tư duy ngôn ngữ, kiến thức xã hội,... làm hành trang phát triển năng lực toàn diện cho Học viên sau này.',
-    color: 'bg-[#acecfe]',
-  },
-];
-
