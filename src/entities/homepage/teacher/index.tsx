@@ -1,50 +1,19 @@
 import { BaseWrapperBasic } from '../BaseWrapper';
-import Teacher1 from '@/assets/teacher/Le-Duy-Anh.jpg';
 import { CertificateIcon } from '@/based/config/SVGIcon';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-const ListTeacher = [
-  {
-    id: 1,
-    img: Teacher1,
-    name: 'Nguyễn Thị A',
-    position: 'Giáo viên',
-    listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ Mosteri', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
-  },
-  {
-    id: 2,
-    img: Teacher1,
-    name: 'Nguyễn Thị B',
-    position: 'Giáo viên',
-    listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
-  },
-  {
-    id: 3,
-    img: Teacher1,
-    name: 'Nguyễn Thị C',
-    position: 'Giáo viên',
-    listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
-  },
-  {
-    id: 4,
-    img: Teacher1,
-    name: 'Nguyễn Thị D',
-    position: 'Giáo viên',
-    listCertificate: ['Chứng chỉ giáo viên', 'Chứng chỉ giáo viên', 'Chứng chỉ giáo viên'],
-  },
-];
-
+import { ListTeacher } from '@/based/data/Data';
 const Teacher = () => {
   const [selectedTeacher, setSelectedTeacher] = useState(ListTeacher[0]);
 
   return (
-    <BaseWrapperBasic className="flex flex-col p-4 md:p-8">
+    <BaseWrapperBasic className="box flex flex-col p-4 md:p-8">
       <div className="w-full md:w-[60%] mx-auto">
         <h2 className="text-2xl font-bold mb-4">Đội ngũ giáo viên</h2>
         <p className="mb-8">
           Là những giáo viên luôn tận tâm với công việc, được đào tạo chuyên môn bài bản và đạt chuẩn theo chương trình giảng dạy
         </p>
-        <div className="list-img-teacher grid grid-cols-2 md:flex md:justify-between mb-8 w-full ">
+        <div className="box_scale list-img-teacher grid grid-cols-2 md:flex md:justify-between mb-8 w-full ">
           {ListTeacher.map((teacher, index) => (
             <div
               key={index}
@@ -59,7 +28,7 @@ const Teacher = () => {
           ))}
         </div>
         <AnimatePresence key={selectedTeacher.id}>
-          <div className="teacher-info  md:grid grid-cols-[40%,65%] ">
+          <div className="teacher-info box_scale md:mt-10 md:grid grid-cols-[40%,65%] ">
             <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}

@@ -5,16 +5,19 @@ import Introduce from './introduce';
 import RoadStudy from './road-study';
 import Teacher from './teacher';
 import TrainingPhilosophy from './training-philosophy';
+import ScrollAnimationBox from '@/components/scroll-animation-box';
 const HomePage = () => {
   return (
     <HomePageWrapper>
       <Promo />
       <HomePageBody className="promo-body">
-        <Introduce />
-        <RoadStudy />
-        <Student />
-        <TrainingPhilosophy />
-        <Teacher />
+        <ScrollAnimationBox>
+          <Introduce />
+          <RoadStudy />
+          <Student />
+          <TrainingPhilosophy />
+          <Teacher />
+        </ScrollAnimationBox>
       </HomePageBody>
     </HomePageWrapper>
   );

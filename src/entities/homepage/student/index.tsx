@@ -10,57 +10,7 @@ import { useRef } from 'react';
 import { Navigation } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { useIsMobile } from '@/based/hook/CheckDevice';
-
-import ImgStudent1 from '@assets/student/student1.jpg';
-import ImgStudent2 from '@assets/student/student2.jpg';
-import ImgStudent3 from '@assets/student/student3.jpg';
-import ImgStudent4 from '@assets/student/student4.jpg';
-import ImgStudent5 from '@assets/student/student5.jpg';
-import ImgStudent6 from '@assets/student/student6.jpg';
-
-const listStudent = [
-  {
-    id: 1,
-    name: 'Bé Nguyễn Thị Hải Yến',
-    image: ImgStudent1,
-    comment:
-      'Con thích vũ trụ và phi hành gia, học ở Happy Kid con vừa được giao tiếp bằng tiếng Anh với mọi người vừa được chơi nhiều trò chơi rất vui.',
-  },
-  {
-    id: 2,
-    name: 'Bé Trần Đăng Khoa',
-    image: ImgStudent2,
-    comment:
-      'Con rất yêu thích những câu chuyện phiêu lưu và khám phá. Ở Happy Kid, con học được nhiều điều mới mẻ và sáng tạo trong các trò chơi nhóm.',
-  },
-  {
-    id: 3,
-    name: 'Bé Phạm Gia Huy',
-    image: ImgStudent3,
-    comment: 'Con rất đam mê khoa học và công nghệ. Happy Kid giúp con mở rộng kiến thức và con thích thú với các bài học thực hành và thí nghiệm.',
-  },
-  {
-    id: 4,
-    name: 'Bé Lê Quỳnh Anh',
-    image: ImgStudent4,
-    comment:
-      'Con yêu thích nghệ thuật và sáng tạo. Ở Happy Kid, con được tham gia nhiều hoạt động nghệ thuật thú vị và học cách thể hiện bản thân qua các dự án nhóm.',
-  },
-  {
-    id: 5,
-    name: 'Bé Vũ Hoàng Minh',
-    image: ImgStudent5,
-    comment:
-      'Con rất thích thể thao và hoạt động ngoài trời. Happy Kid đã giúp con rèn luyện kỹ năng thể thao và làm việc nhóm trong các trò chơi thể thao hấp dẫn.',
-  },
-  {
-    id: 6,
-    name: 'Bé Đỗ Ngọc Lan',
-    image: ImgStudent6,
-    comment:
-      'Con đam mê đọc sách và tìm hiểu văn học. Ở Happy Kid, con được khuyến khích đọc nhiều sách và tham gia các hoạt động liên quan đến văn học.',
-  },
-];
+import { listStudent } from '@/based/data/Data';
 
 const Student = () => {
   const swiperRef = useRef() as any;
@@ -90,7 +40,8 @@ const Student = () => {
         <TrainingTitle className="text-[18px] md:text-[33px] md:w-[60%] w-[85%] text-center mt-4">
           HAPPY KIDS MANG ĐẾN BƯỚC KHỞI ĐẦU TỐT VÀ TOÀN DIỆN NHẤT CHO TRẺ
         </TrainingTitle>
-        <div className="md:max-w-[1100px] md:min-w-[900px] w-full md:h-[200px] h-[150px] mt-10">
+
+        <div className="box_scale md:max-w-[1100px] md:min-w-[900px] w-full md:h-[200px] h-[150px] mt-10">
           <Swiper
             spaceBetween={isMobile ? 0 : 20}
             modules={[Navigation]}
@@ -107,11 +58,11 @@ const Student = () => {
                   {({ isActive }) => {
                     isActive && setActiveIndex(student.id - 1);
                     return (
-                      <div className="student-wrapper flex justify-center items-center ">
+                      <div className="student-wrapper pt-[5px] flex justify-center items-center ">
                         <img
                           src={student.image}
                           alt={student.name}
-                          className="student-image rounded-full border-[4px] border-blueNormal w-[120px] h-[120px] md:w-[170px] md:h-[170px] object-cover"
+                          className="student-image rounded-full border-[4px] border-blueNormal w-[120px] h-[120px] md:w-[190px] md:h-[190px] object-cover"
                         />
                       </div>
                     );
@@ -121,8 +72,8 @@ const Student = () => {
             })}
           </Swiper>
         </div>
-        <TrainingTitle className="text-[24px]">{listStudent[activeIndex].name}</TrainingTitle>
-        <TrainingSubTitle>Happy Kids</TrainingSubTitle>
+        <TrainingTitle className="box_scale text-[24px]">{listStudent[activeIndex].name}</TrainingTitle>
+        <TrainingSubTitle className="box_scale">Happy Kids</TrainingSubTitle>
         <div className=" text-[16px] w-[90%] md:w-[60%] md:text-[16px] bg-[#fafaa4] rounded-[30px] relative py-6 px-10 text-center my-8">
           <motion.div key={activeIndex} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
             {listStudent[activeIndex].comment}
@@ -147,7 +98,8 @@ const StudentWrapper = styled.div`
   }
   display: flex;
   .student-wrapper {
-    filter: drop-shadow(1px 1px 20px #fafaa4);
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 8px #3b82f6);
   }
 `;
 const TrainingTitle = styled.h2`

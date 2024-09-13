@@ -14,7 +14,7 @@ const RoadStudy = () => {
 
   return (
     <BaseWrapperWithColor className="flex items-center md:py-10 md:min-h-[950px] max-h-[950px] min-h-[950px] h-[950px]">
-      <ModalWrapper className="md:bg-white rounded-lg w-[100%] md:w-[80%] h-[95%] max-2xl:h-[95%] max-2xl:mt-[10%] my-[6%] md:pt-10 pb-[20px] px-[3%] mx-auto md:shadow-xl">
+      <ModalWrapper className=" md:bg-white rounded-lg w-[100%] md:w-[80%] h-[95%] max-2xl:h-[95%] max-2xl:mt-[10%] my-[6%] md:pt-10 pb-[20px] px-[3%] mx-auto md:shadow-xl">
         <ModalHeader className="md:bg-white rounded-t-lg text-[24px] md:text-[32px] font-bold">
           Đào tạo trẻ theo phương pháp giáo dục Montessori
         </ModalHeader>
@@ -23,7 +23,11 @@ const RoadStudy = () => {
           thực hành. Điều này giúp trẻ phát triển tính độc lập, sáng tạo và khả năng tự học <strong className="text-blueDark">ngay từ nhỏ</strong>.
         </div>
         <ModalContent>{isMobile ? <RoadMapMobile /> : <RoadMap />}</ModalContent>
-        <img src={ImgCute} alt="cute" className="w-[150px] md:w-[300px] h-auto absolute bottom-[10%] md:bottom-[0%]  right-[-20px]  object-cover" />
+        <img
+          src={ImgCute}
+          alt="cute"
+          className="box_scale w-[150px] md:w-[300px] h-auto absolute bottom-[10%] md:bottom-[0%]  right-[-20px]  object-cover"
+        />
       </ModalWrapper>
     </BaseWrapperWithColor>
   );
