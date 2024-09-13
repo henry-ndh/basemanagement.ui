@@ -5,7 +5,7 @@ import ImgClass1 from '@/assets/class/class2.jpg';
 const HomeInfraStructure = () => {
   return (
     <BaseWrapperBasic className="flex flex-col p-4 md:p-8 min-h-[1000px] max-h-[1200px]">
-      <div className="2xl:w-[1300px] lg:w-[1100px] mx-auto">
+      <div className="2xl:w-[1100px] lg:w-[900px] mx-auto">
         <Title className="text-[34px] font-bold mb-4 text-center">Cơ sở vật chất</Title>
         <IntroduceTitle className="mb-8 text-center">
           Cơ sở vật chất của Happy Kids luôn đặt lên hàng đầu, mỗi trẻ sẽ luôn có một môi trường rộng rãi, gọn gàng, sạch sẽ để phát triển tốt nhất{' '}

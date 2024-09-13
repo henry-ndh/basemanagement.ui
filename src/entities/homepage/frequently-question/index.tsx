@@ -1,8 +1,10 @@
+import { BaseWrapperGrey } from '../BaseWrapper';
+
 const FrequentlyQuestion = () => {
   return (
-    <div>
+    <BaseWrapperGrey>
       <h1>Frequently Question</h1>
-    </div>
+    </BaseWrapperGrey>
   );
 };
 

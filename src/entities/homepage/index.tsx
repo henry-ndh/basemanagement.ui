@@ -9,6 +9,8 @@ import Advisory from './advisory';
 import HomeInfraStructure from './home-infrastructure';
 import ScrollAnimationBox from '@/components/scroll-animation-box';
 import Footer from './footer';
+import FrequentlyQuestion from './frequently-question';
+import Vision from './vision';
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -22,7 +24,8 @@ const HomePage = () => {
           <Teacher />
           <Advisory />
           <HomeInfraStructure />
-          <Advisory />
+          <Vision />
+          <FrequentlyQuestion />
           <Footer />
         </ScrollAnimationBox>
       </HomePageBody>
