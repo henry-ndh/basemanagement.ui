@@ -31,12 +31,12 @@ const Advisory = () => {
       <div className="w-full flex items-center flex-col md:w-[70%] mx-auto">
         <TrainingTitle className="text-[34px] mb-4">Nhận tư vấn</TrainingTitle>
 
-        <div className="box_scale advisory_wrapper h-[500px] md:h-[550px] flex bg-white  rounded-[16px]">
+        <div className=" advisory_wrapper h-[500px] md:h-[550px] flex bg-white  rounded-[16px]">
           <div className="advisory_left md:block hidden w-[65%]">
             <img src={Banner1} alt="banner" className="w-full h-full object-fill rounded-tl-2xl rounded-bl-2xl" />
           </div>
           <div className="advisory_right w-full  md:w-1/2 p-5 text-center">
-            <Title>Cùng Happy Kids chắp cánh cho con em</Title>
+            <Title className="text-[20px]">Cùng Happy Kids chắp cánh cho con em</Title>
             <p className="text-[13px] mt-1 mb-3">Hơn 100+ phụ huynh đã tin tưởng và cùng Happy Kids chắp cánh con em ta</p>
             <div className="space-y-2">
               <Input placeholder="Nhập tên phụ huynh *" className="border-[1px] border-gray-300" />

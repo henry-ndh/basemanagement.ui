@@ -8,7 +8,7 @@ import TrainingPhilosophy from './training-philosophy';
 import Advisory from './advisory';
 import HomeInfraStructure from './home-infrastructure';
 import ScrollAnimationBox from '@/components/scroll-animation-box';
-
+import Footer from './footer';
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -22,6 +22,8 @@ const HomePage = () => {
           <Teacher />
           <Advisory />
           <HomeInfraStructure />
+          <Advisory />
+          <Footer />
         </ScrollAnimationBox>
       </HomePageBody>
     </HomePageWrapper>
