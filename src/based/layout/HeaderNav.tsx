@@ -20,8 +20,8 @@ const HeaderNav = () => {
       <motion.button
         whileHover={{ scale: 1.01 }}
         className="px-4 py-2 text-[16px] max-2xl:w-[120px]  max-2xl:text-[13px] w-[150px] text-white font-medium ml-2  bg-blueDark rounded-[50px] cursor-pointer
-          hover:bg-[#1b245b] transition-all duration-300 ease-in-out
-        "
+            hover:bg-[#1b245b] transition-all duration-300 ease-in-out
+          "
       >
         <a href="/">Đặt lịch hẹn</a>
       </motion.button>

@@ -7,7 +7,7 @@ import textLogo from '@assets/text-logo.png';
 
 export default function Header() {
   return (
-    <HeaderWrapper style={{ zIndex: '999' }} className="flex  items-center justify-between">
+    <HeaderWrapper style={{ zIndex: '999' }} className="sticky flex items-center justify-between">
       <Link to="/" className="flex items-center font-bold">
         <img alt="logo" src={logo} className="w-12 h-12 rounded-full mr-2" />
         <img alt="text-logo" src={textLogo} className="w-24 h-12 rounded-full mr-2" />

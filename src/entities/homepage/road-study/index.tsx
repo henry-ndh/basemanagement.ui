@@ -13,8 +13,8 @@ const RoadStudy = () => {
   }, []);
 
   return (
-    <BaseWrapperWithColor className="flex items-center md:py-10 md:min-h-[950px] h-[950px]">
-      <ModalWrapper className="md:bg-white rounded-lg w-[100%] md:w-[80%]  h-[95%] max-2xl:h-[95%] max-2xl:mt-[10%] my-[6%] md:pt-10 pb-[20px] px-[3%] mx-auto md:shadow-xl">
+    <BaseWrapperWithColor className="flex items-center md:py-10 md:min-h-[950px] max-h-[950px] min-h-[950px] h-[950px]">
+      <ModalWrapper className="md:bg-white rounded-lg w-[100%] md:w-[80%] h-[95%] max-2xl:h-[95%] max-2xl:mt-[10%] my-[6%] md:pt-10 pb-[20px] px-[3%] mx-auto md:shadow-xl">
         <ModalHeader className="md:bg-white rounded-t-lg text-[24px] md:text-[32px] font-bold">
           Đào tạo trẻ theo phương pháp giáo dục Montessori
         </ModalHeader>
