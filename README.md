@@ -1,7 +1,6 @@
 # Introduction
-This is a sample project using React + TypeScript + Vite + ShadcnUI + TailwindCSS.
+UI for HappyKids, Introduce about schools
 
-Just clone the repository and get started right away!
 
 # Run project
 
