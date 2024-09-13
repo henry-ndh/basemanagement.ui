@@ -23,11 +23,7 @@ const RoadStudy = () => {
           thực hành. Điều này giúp trẻ phát triển tính độc lập, sáng tạo và khả năng tự học <strong className="text-blueDark">ngay từ nhỏ</strong>.
         </div>
         <ModalContent>{isMobile ? <RoadMapMobile /> : <RoadMap />}</ModalContent>
-        <img
-          src={ImgCute}
-          alt="cute"
-          className="box_scale w-[150px] md:w-[300px] h-auto absolute bottom-[10%] md:bottom-[0%]  right-[-20px]  object-cover"
-        />
+        <img src={ImgCute} alt="cute" className="w-[150px] md:w-[300px] h-auto absolute bottom-[10%] md:bottom-[0%]  right-[-20px]  object-cover" />
       </ModalWrapper>
     </BaseWrapperWithColor>
   );
