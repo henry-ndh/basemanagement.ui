@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 const FrequentlyQuestion = () => {
   return (
-    <BaseWrapperGrey className="flex flex-col p-4 md:p-8 min-h-[1200px] md:min-h-[650px] md:max-h-[700px]">
+    <BaseWrapperGrey id="cauhoithuonggap" className="flex flex-col  p-4 md:p-8 min-h-[1200px] md:min-h-[650px] md:max-h-[700px]">
       <div className=" 2xl:w-[1200px] lg:w-[1000px] w-full mx-auto ">
         <Title className="text-[34px] font-bold mb-4 text-center">Câu hỏi thường gặp</Title>
         <div className="w-full md:grid md:grid-cols-[55%,38%] justify-between">

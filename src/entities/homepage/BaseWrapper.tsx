@@ -3,18 +3,31 @@ import styled from 'styled-components';
 interface BaseWrapperProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
-const BaseWrapperBasic = ({ children, className }: BaseWrapperProps) => {
-  return <BaseWrapperBasicStyled className={`${className} h-[95dvh] `}>{children}</BaseWrapperBasicStyled>;
+const BaseWrapperBasic = ({ children, className, id }: BaseWrapperProps) => {
+  return (
+    <BaseWrapperBasicStyled id={id} className={`${className} h-[95dvh] `}>
+      {children}
+    </BaseWrapperBasicStyled>
+  );
 };
 
-const BaseWrapperWithColor = ({ children, className }: BaseWrapperProps) => {
-  return <BaseWrapperWithColorStyled className={`${className} h-[95dvh]`}>{children}</BaseWrapperWithColorStyled>;
+const BaseWrapperWithColor = ({ children, className, id }: BaseWrapperProps) => {
+  return (
+    <BaseWrapperWithColorStyled id={id} className={`${className} h-[95dvh]`}>
+      {children}
+    </BaseWrapperWithColorStyled>
+  );
 };
 
-const BaseWrapperGrey = ({ children, className }: BaseWrapperProps) => {
-  return <BaseWrapperGreyStyled className={`${className} h-[95dvh] bg-[#e5e5e5]`}>{children}</BaseWrapperGreyStyled>;
+const BaseWrapperGrey = ({ children, className, id }: BaseWrapperProps) => {
+  return (
+    <BaseWrapperGreyStyled id={id} className={`${className} h-[95dvh] bg-[#e5e5e5]`}>
+      {children}
+    </BaseWrapperGreyStyled>
+  );
 };
 
 const BaseWrapperBasicStyled = styled.div`

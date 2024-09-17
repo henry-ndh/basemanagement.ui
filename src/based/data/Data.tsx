@@ -16,20 +16,21 @@ export const MenuHeader = [
     name: 'Trang chủ',
     link: '/',
   },
+
   {
     id: 2,
-    name: 'Khóa học',
-    link: '/services',
+    name: 'Phương pháp giảng dạy',
+    link: '#phuongphapgiangday',
   },
   {
     id: 3,
-    name: 'Lịch khai giảng',
-    link: '/resume',
+    name: 'Cơ sở vật chất',
+    link: '#cosovatchat',
   },
   {
     id: 4,
     name: 'Hệ thống đào tạo',
-    link: '/resume',
+    link: '#cauhoithuonggap',
   },
 ];
 export const RoadMapData = [

@@ -170,3 +170,18 @@ export const CertificateIcon = {
     );
   },
 };
+
+export const MoveTop = () => {
+  return (
+    <svg viewBox="0 0 1024 1024" width={28} height={28} className="icon" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          fill="#000000"
+          d="M572.235 205.282v600.365a30.118 30.118 0 11-60.235 0V205.282L292.382 438.633a28.913 28.913 0 01-42.646 0 33.43 33.43 0 010-45.236l271.058-288.045a28.913 28.913 0 0142.647 0L834.5 393.397a33.43 33.43 0 010 45.176 28.913 28.913 0 01-42.647 0l-219.618-233.23z"
+        ></path>
+      </g>
+    </svg>
+  );
+};

@@ -27,7 +27,7 @@ const listTime = [
 const Advisory = () => {
   const [selectedTime, setSelectedTime] = useState<string>('');
   return (
-    <BaseWrapperWithColor className="flex flex-col p-4 md:p-8 max-h-[700px] md:max-h-[750px]">
+    <BaseWrapperWithColor id="advisory" className="flex flex-col p-4 md:p-8 max-h-[700px] md:max-h-[750px]">
       <div className="w-full flex items-center flex-col md:w-[70%] mx-auto">
         <TrainingTitle className="text-[34px] mb-4">Nhận tư vấn</TrainingTitle>
 

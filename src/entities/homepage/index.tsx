@@ -11,6 +11,7 @@ import ScrollAnimationBox from '@/components/scroll-animation-box';
 import Footer from './footer';
 import FrequentlyQuestion from './frequently-question';
 import Vision from './vision';
+import ScrollToTop from '@/components/move-to-top';
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -28,6 +29,7 @@ const HomePage = () => {
           <FrequentlyQuestion />
           <Footer />
         </ScrollAnimationBox>
+        <ScrollToTop />
       </HomePageBody>
     </HomePageWrapper>
   );

@@ -65,7 +65,7 @@ const HomeInfraStructure = () => {
   const [selectedImage, setSelectedImage] = useState(HomeInfraStructureData[0]);
 
   return (
-    <BaseWrapperBasic className="flex flex-col p-4 md:p-8 min-h-[1400px] max-h-[1500px]  md:min-h-[1000px] md:max-h-[1200px]">
+    <BaseWrapperBasic id="cosovatchat" className="flex flex-col p-4 md:p-8 min-h-[1400px] max-h-[1500px]  md:min-h-[1000px] md:max-h-[1200px]">
       <div className="2xl:w-[1100px] lg:w-[900px] mx-auto">
         <Title className="text-[34px] font-bold mb-4 text-center">Cơ sở vật chất</Title>
         <IntroduceTitle className="mb-8 text-center">
