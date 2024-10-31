@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 
 const HomePage = React.lazy(() => import('@/entities/homepage'));
-const SpeakingPage = React.lazy(() => import('@/entities/speaking'));
+const OverViewPage = React.lazy(() => import('@/entities/overview'));
 const Loading = React.lazy(() => import('@/components/loading'));
+
 const AppRoutes = [
   {
     path: '/',
@@ -14,10 +15,10 @@ const AppRoutes = [
     layout: true,
   },
   {
-    path: '/speaking',
+    path: '/overView',
     element: (
       <Suspense fallback={<Loading isOpen={true} />}>
-        <SpeakingPage />
+        <OverViewPage />
       </Suspense>
     ),
     layout: true,

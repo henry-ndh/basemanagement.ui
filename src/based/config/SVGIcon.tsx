@@ -173,15 +173,61 @@ export const CertificateIcon = {
 
 export const MoveTop = () => {
   return (
-    <svg viewBox="0 0 1024 1024" width={28} height={28} className="icon" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+    <svg viewBox="0 0 1024 1024" width={28} height={28} className="icon" xmlns="http://www.w3.org/2000/svg" fill="#fff">
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
       <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
       <g id="SVGRepo_iconCarrier">
         <path
-          fill="#000000"
+          fill="#fff"
           d="M572.235 205.282v600.365a30.118 30.118 0 11-60.235 0V205.282L292.382 438.633a28.913 28.913 0 01-42.646 0 33.43 33.43 0 010-45.236l271.058-288.045a28.913 28.913 0 0142.647 0L834.5 393.397a33.43 33.43 0 010 45.176 28.913 28.913 0 01-42.647 0l-219.618-233.23z"
         ></path>
       </g>
     </svg>
   );
+};
+
+export const Message = () => {
+  return (
+    <svg viewBox="0 0 24 24" width={34} height={34} fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <path
+          d="M16 10H16.01M12 10H12.01M8 10H8.01M7 16V21L12 16H20V4H4V16H7Z"
+          stroke="#fff"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>{' '}
+      </g>
+    </svg>
+  );
+};
+
+export const Social = {
+  Facebook: (props: any) => {
+    return (
+      <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000" {...props}>
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          {' '}
+          <title>Messenger-color</title> <desc>Created with Sketch.</desc> <defs> </defs>{' '}
+          <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            {' '}
+            <g id="Color-" transform="translate(-301.000000, -860.000000)" fill="#007FFF">
+              {' '}
+              <path
+                d="M325,860 C311.745143,860 301,869.949185 301,882.222222 C301,889.215556 304.489988,895.453481 309.944099,899.526963 L309.944099,908 L318.115876,903.515111 C320.296745,904.118667 322.607155,904.444444 325,904.444444 C338.254857,904.444444 349,894.495259 349,882.222222 C349,869.949185 338.254857,860 325,860 L325,860 Z M327.385093,889.925926 L321.273292,883.407407 L309.347826,889.925926 L322.465839,876 L328.726708,882.518519 L340.503106,876 L327.385093,889.925926 L327.385093,889.925926 Z"
+                id="Messenger"
+              >
+                {' '}
+              </path>{' '}
+            </g>{' '}
+          </g>{' '}
+        </g>
+      </svg>
+    );
+  },
 };

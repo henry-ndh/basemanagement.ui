@@ -12,6 +12,7 @@ import Footer from './footer';
 import FrequentlyQuestion from './frequently-question';
 import Vision from './vision';
 import ScrollToTop from '@/components/move-to-top';
+import Messenger from '@/components/message-plugin';
 const HomePage = () => {
   return (
     <HomePageWrapper>
@@ -30,6 +31,7 @@ const HomePage = () => {
           <Footer />
         </ScrollAnimationBox>
         <ScrollToTop />
+        <Messenger />
       </HomePageBody>
     </HomePageWrapper>
   );

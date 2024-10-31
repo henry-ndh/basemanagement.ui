@@ -1,52 +1,59 @@
 import { MoveTop } from '@/based/config/SVGIcon';
-import React, { useState, useEffect } from 'react';
-type Props = React.ComponentPropsWithoutRef<'button'> & {
-  top?: number;
-  smooth?: boolean;
-  svgPath?: string;
-  viewBox?: string;
-  component?: any;
-  width?: string;
-  height?: string;
-};
+import { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
-function scrollToTop(smooth: boolean = false) {
-  if (smooth) {
+const ScrollToTopBtn = styled.button<{ visible: boolean }>`
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const ScrollToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 150) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
-  } else {
-    document.documentElement.scrollTop = 0;
-  }
-}
-
-const ScrollToTop = ({ top = 20, className = '', color = 'black', smooth = false, component = '', ...props }: Props) => {
-  const [visible, setVisible] = useState(false);
+  };
 
   useEffect(() => {
-    const onScroll = () => {
-      setVisible(document.documentElement.scrollTop >= top);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
     };
-    onScroll();
-    document.addEventListener('scroll', onScroll);
-    return () => document.removeEventListener('scroll', onScroll);
-  }, [top]);
+  }, []);
 
   return (
-    <>
-      {visible && (
-        <button
-          className={`scroll-to-top ${className} flex justify-center items-center rounded-full`}
-          onClick={() => scrollToTop}
-          aria-label="Scroll to top"
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          {...props}
-        >
-          {component || <MoveTop />}
-        </button>
-      )}
-    </>
+    isVisible && (
+      <ScrollToTopBtn className="bg-blueDark" onClick={scrollToTop} visible={isVisible}>
+        <MoveTop />
+      </ScrollToTopBtn>
+    )
   );
 };
 

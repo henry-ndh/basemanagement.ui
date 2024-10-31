@@ -5,7 +5,9 @@ import { Input } from '@/components/ui/input';
 import { useState } from 'react';
 import { Title } from '../BaseWrapper';
 import { Button } from '@/components/ui/button';
-
+import { useCreateAdvisory } from '@/query/AdvisoryQuery';
+import { useToast } from '@/components/ui/use-toast';
+import { ToastAction } from '@/components/ui/toast';
 const listTime = [
   {
     id: 1,
@@ -25,7 +27,26 @@ const listTime = [
 ];
 
 const Advisory = () => {
-  const [selectedTime, setSelectedTime] = useState<string>('');
+  const [model, setModel] = useState({
+    name: '',
+    phone: '',
+    timeAdvisory: '',
+  });
+  const { mutateAsync } = useCreateAdvisory();
+  const { toast } = useToast();
+  const handleCreateAdvisory = async () => {
+    try {
+      await mutateAsync(model);
+      toast({
+        title: 'Đăng ký tư vấn thành công',
+        description: 'Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất',
+        action: <ToastAction altText="Goto schedule to undo">Ok</ToastAction>,
+        className: 'bg-green-700 text-white bg-gradient-to-r from-cyan-500 to-blue-500 top-0',
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <BaseWrapperWithColor id="advisory" className="flex flex-col p-4 md:p-8 max-h-[700px] md:max-h-[750px]">
       <div className="w-full flex items-center flex-col md:w-[70%] mx-auto">
@@ -39,8 +60,16 @@ const Advisory = () => {
             <Title className="text-[20px]">Cùng Happy Kids chắp cánh cho con em</Title>
             <p className="text-[13px] mt-1 mb-3">Hơn 100+ phụ huynh đã tin tưởng và cùng Happy Kids chắp cánh con em ta</p>
             <div className="space-y-2">
-              <Input placeholder="Nhập tên phụ huynh *" className="border-[1px] border-gray-300" />
-              <Input placeholder="Nhập số điện thoại phụ huynh *" />
+              <Input
+                placeholder="Nhập tên phụ huynh *"
+                className="border-[1px] border-gray-300"
+                onChange={(e) => setModel({ ...model, name: e.target.value })}
+              />
+              <Input
+                placeholder="Nhập số điện thoại phụ huynh *"
+                className="border-[1px] border-gray-300"
+                onChange={(e) => setModel({ ...model, phone: e.target.value })}
+              />
             </div>
             <Title className="font-bold text-start my-4">Thời gian bạn muốn nhận tư vấn</Title>
             <div>
@@ -49,10 +78,10 @@ const Advisory = () => {
                   <h3 className="font-semibold w-[15%] text-start">{item.title}: </h3>
                   {item.time.map((time, index) => (
                     <button
-                      onClick={() => setSelectedTime(time)}
+                      onClick={() => setModel({ ...model, timeAdvisory: time })}
                       key={index}
                       className={`px-[12px] py-[6px] rounded-[16px] border-[1px] border-[#555F6D] text-[14px] ${
-                        time === selectedTime ? 'bg-blueDark text-white' : 'bg-white'
+                        time === model.timeAdvisory ? 'bg-blueDark text-white' : 'bg-white'
                       }`}
                     >
                       {time}
@@ -61,7 +90,9 @@ const Advisory = () => {
                 </div>
               ))}
             </div>
-            <Button className="w-full bg-blueDark rounded-xl mt-4">Nhận tư vấn ngay</Button>
+            <Button className="w-full bg-blueDark rounded-xl mt-4" onClick={handleCreateAdvisory}>
+              Nhận tư vấn ngay
+            </Button>
           </div>
         </div>
       </div>
